@@ -1,0 +1,85 @@
+:root {
+  --color-primario: #0f4c5c;
+  --color-acento: #e36414;
+  --color-fondo: #f3f6f4;
+  --fuente: Arial, sans-serif;
+}
+
+body {
+  font-family: var(--fuente);
+  background: var(--color-fondo);
+  margin: 0;
+}
+
+header, footer {
+  background: var(--color-primario);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.card.resaltada {
+  background: #fff4ea;
+  box-shadow: 0 4px 12px rgba(227, 100, 20, 0.5);
+}
+
+.badge {
+  background: var(--color-primario);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.badge:hover {
+  background: var(--color-acento);
+}
+
+.cupos {
+  font-weight: bold;
+}
+
+.cupos:hover {
+  color: var(--color-acento);
+}
+
+.btn-inscribir {
+  background: var(--color-acento);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-inscribir:hover {
+  background: #b94d0a;
+}
+
+button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
