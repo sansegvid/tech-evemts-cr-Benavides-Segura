@@ -3,7 +3,7 @@ const cuposTotales = 50;
 let cuposDisponibles = 50;
 let totalInscritos = 0;
 
-const mensaje = document.querySelector("#mesaje");
+const mensaje = document.querySelector("#mensaje");
 const inputCantidad = document.querySelector("#cantidad");
 const btnInscribir = document.querySelector("#btnInscribir");
 const resumen = document.querySelector("#resumen");
@@ -15,7 +15,7 @@ function mostrarResumen(texto) {
 }
 
 function registrarInscripcion() {
-  const inscritos = inputCantidad.value;
+  const inscritos = Number(inputCantidad.value);
   totalInscritos = totalInscritos + inscritos;
   cuposDisponibles = cuposTotales - totalInscritos;
 
